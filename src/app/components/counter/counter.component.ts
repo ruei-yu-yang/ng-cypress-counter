@@ -10,7 +10,7 @@ export class CounterComponent implements OnInit {
   counter: number = 0;
   MAX_VALUE = 10;
   MIN_VALUE = -10;
-  constructor(private counterService: CounterService) {}
+  constructor(private counterService: CounterService) { }
 
   ngOnInit(): void {
     this.counter = this.counterService.getFromStorage();

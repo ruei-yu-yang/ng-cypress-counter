@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'Writing your first Cypress test';
+  title = 'Validating if a DOM element is visible on the view';
+  isCounterVisible = false;
+  constructor() { }
 
-  constructor() {}
+  ngOnInit() { }
 
-  ngOnInit() {}
+  toggleCounterVisibility() {
+    this.isCounterVisible = !this.isCounterVisible;
+  }
 }
