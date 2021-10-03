@@ -17,7 +17,7 @@ context("App", () => {
 
   it('should show the action buttons on hovering the counter card',()=>{
     cy.contains('Toggle Counter Visibility').click();
-    cy.get('.counter').trigger('mouseover');
+    cy.get('.counter').realHover();
     cy.get('.counter__actions__action').should('have.length',3);
     cy.contains('Increment').should('be.visible');
     cy.contains('Decrement').should('be.visible');
